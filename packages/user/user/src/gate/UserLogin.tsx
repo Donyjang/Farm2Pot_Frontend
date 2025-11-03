@@ -1,12 +1,12 @@
 // Login.tsx
-import { useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
-import styles from "./AdminLogin.module.scss";
+import { useState } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
+import styles from './AdminLogin.module.scss';
 
 // TODO: 실제로는 useAuthContext 등을 사용
-const AdminLogin = () => {
-  const [id, setId] = useState("");
-  const [password, setPassword] = useState("");
+const UserLogin = () => {
+  const [id, setId] = useState('');
+  const [password, setPassword] = useState('');
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
 
@@ -17,7 +17,7 @@ const AdminLogin = () => {
     // 일단은 그냥 로그인 되었다고 가정
 
     // 쿼리 파라미터로 전달된 리디렉션 경로로 이동
-    const redirectPath = searchParams.get("pathname") || "/admin/main";
+    const redirectPath = searchParams.get('pathname') || '/admin/main';
     navigate(redirectPath, { replace: true });
   };
 
@@ -25,8 +25,8 @@ const AdminLogin = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
 
-    if (name === "id") setId(value);
-    if (name === "password") setPassword(value);
+    if (name === 'id') setId(value);
+    if (name === 'password') setPassword(value);
   };
 
   return (
@@ -72,4 +72,4 @@ const AdminLogin = () => {
   );
 };
 
-export default AdminLogin;
+export default UserLogin;
