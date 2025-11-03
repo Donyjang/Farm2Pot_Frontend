@@ -1,28 +1,29 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import React from "react";
-import AdminLogin from "../gate/AdminLogin";
-import About from "./About";
-import Profile from "./Profile";
+import React from 'react';
+import AdminLogin from '../gate/UserLogin';
+import About from './About';
+import Profile from './Profile';
+import UserLogin from '../gate/UserLogin';
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <AdminLogin />, // 로그인 페이지 라우트
+    path: '/',
+    element: <UserLogin />, // 로그인 페이지 라우트
   },
   {
-    path: "/admin/login",
-    element: <AdminLogin />, // 로그인 페이지 라우트
+    path: '/user/login',
+    element: <UserLogin />, // 로그인 페이지 라우트
   },
   // 관리자 페이지
   {
-    path: "/admin",
-    element: <AdminLogin />, // <Outlet /> 포함
+    path: '/user',
+    element: <UserLogin />, // <Outlet /> 포함
     children: [
-      { index: true, element: <AdminLogin /> }, // /
-      { path: "main", element: <AdminLogin /> }, // /main
-      { path: "about", element: <About /> }, // /about
-      { path: "profile", element: <Profile /> }, // /profile
+      { index: true, element: <UserLogin /> }, // /
+      { path: 'main', element: <UserLogin /> }, // /main
+      { path: 'about', element: <About /> }, // /about
+      { path: 'profile', element: <Profile /> }, // /profile
     ],
   },
 ]);
