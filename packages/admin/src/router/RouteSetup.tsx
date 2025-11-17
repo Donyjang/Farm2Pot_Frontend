@@ -6,8 +6,8 @@ import {
 
 import React from "react";
 
+import AdminLayout from "../component/layout/AdminLayout";
 import AdminLogin from "../component/login/AdminLogin";
-import AdminLayout from "./AdminLayout";
 import BaseRoute from "./BaseRoute";
 
 const router = createBrowserRouter([
