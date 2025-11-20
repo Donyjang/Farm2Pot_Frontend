@@ -1,5 +1,5 @@
 // Root.tsx
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 //import TopLayout from '../component/common/top/TopLayout';
 import Header from '../component/common/Header';
