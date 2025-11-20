@@ -1,4 +1,4 @@
-import React, { useState, type ChangeEvent, type FormEvent,  } from 'react';
+import React, { useState, type ChangeEvent, type FormEvent, } from 'react';
 import { registerUser, type RegisterPayload } from '../../api/UserApi';
 import styles from './SignUp.module.scss'; // SCSS 모듈 임포트
 
@@ -56,33 +56,35 @@ const SignUp: React.FC = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <h2>회원가입</h2>
-      <form onSubmit={handleSubmit} className={styles.form}>
-        {fields.map(field => (
-          <div key={field.name}>
-            <label>{field.label}{field.required && '*'}</label>
-            {field.options ? (
-              <select name={field.name} value={formData[field.name]} onChange={handleChange}>
-                {field.options.map(opt => (
-                  <option key={opt.value} value={opt.value}>{opt.label}</option>
-                ))}
-              </select>
-            ) : (
-              <input
-                type={field.type || 'text'}
-                name={field.name}
-                value={formData[field.name]}
-                onChange={handleChange}
-                placeholder={field.placeholder}
-                required={field.required}
-              />
-            )}
-          </div>
-        ))}
+    <div className={styles.wrapper}>
+      <div className={styles.container}>
+        <h2>회원가입</h2>
+        <form onSubmit={handleSubmit} className={styles.form}>
+          {fields.map(field => (
+            <div key={field.name}>
+              <label>{field.label}{field.required && '*'}</label>
+              {field.options ? (
+                <select name={field.name} value={formData[field.name]} onChange={handleChange}>
+                  {field.options.map(opt => (
+                    <option key={opt.value} value={opt.value}>{opt.label}</option>
+                  ))}
+                </select>
+              ) : (
+                <input
+                  type={field.type || 'text'}
+                  name={field.name}
+                  value={formData[field.name]}
+                  onChange={handleChange}
+                  placeholder={field.placeholder}
+                  required={field.required}
+                />
+              )}
+            </div>
+          ))}
 
-        <button type="submit">저장</button>
-      </form>
+          <button type="submit">저장</button>
+        </form>
+      </div>
     </div>
   );
 };

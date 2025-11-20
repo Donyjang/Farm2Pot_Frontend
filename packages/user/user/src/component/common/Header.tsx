@@ -13,6 +13,7 @@ const Header: React.FC = () => {
         <Link to="/user/about" className={styles.link}>About</Link>
         <Link to="/user/signup" className={styles.link}>SignUp</Link>
         <Link to="/user/login" className={styles.link}>LogIn</Link>
+        <Link to="/user/mypage" className={styles.link}>MyPage</Link>
       </nav>
 
       <div className={styles.search}>

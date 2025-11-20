@@ -1,5 +1,13 @@
 // SignUp.module.scss
 
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 75px; // 상단 여백
+  padding-bottom: 75px; // 하단 여백 (footer와의 간격)
+}
+
 .container {
   width: 1200px;
   max-width: 1200px;

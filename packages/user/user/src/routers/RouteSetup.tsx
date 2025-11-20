@@ -6,11 +6,10 @@ import {
 
 import React from 'react';
 import UserLogin from '../component/login/UserLogin';
-import About from './About';
-import Profile from './Profile';
 import UserLayout from './UserLayout';
 import BaseRoute from './BaseRoute';
 import SignUp from '../component/signup/SignUp';
+import MyPage from '../component/mypage/MyPage';
 
 const router = createBrowserRouter([
   // 유저 페이지
@@ -35,8 +34,8 @@ const router = createBrowserRouter([
         element: <SignUp />,
       },
       {
-        path: 'profile',
-        element: <Profile />,
+        path: 'mypage',
+        element: <MyPage />,
       },
     ],
   },
