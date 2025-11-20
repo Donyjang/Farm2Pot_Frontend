@@ -1,7 +1,7 @@
-/* ========================
-   Login Page Layout
-======================== */
-main {
+// UserLogin.module.scss
+
+// Main section
+.main {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,99 +11,90 @@ main {
   max-width: 1200px;
   margin: 0 auto;
 
-  /* Desktop layout */
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: space-between;
   }
 }
 
-/* ========================
-   Login Image
-======================== */
 .loginImage {
-  img {
-    width: 600px;
-    height: auto;
-  }
-
-  @media (min-width: 768px) {
-    width: 50%;
-  }
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
 }
 
-/* ========================
-   Login Form
-======================== */
+.image {
+  width: 100%;
+  height: auto;
+}
+
 .loginForm {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
 
   @media (min-width: 768px) {
     width: 40%;
     margin-left: 20px;
-    margin-top: 0;
   }
+}
 
-  h2 {
-    font-size: 1.5rem; /* text-2xl */
-    font-weight: 600;  /* font-semibold */
-    margin-bottom: 4px; /* mb-1 */
-  }
+.title {
+  font-size: 1.5rem; // text-2xl
+  font-weight: 600; // font-semibold
+  margin-bottom: 1rem; // mb-1
+}
 
-  p {
-    color: #6b7280; /* text-gray-500 */
-    margin-bottom: 24px; /* mb-6 */
-  }
+.description {
+  color: #6b7280; // text-gray-500
+  margin-bottom: 1.5rem; // mb-6
+}
 
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* space-y-5 */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; // space-y-5
+}
 
-    input {
-      width: 100%;
-      padding: 10px;
-      border-bottom: 1px solid #ccc;
-      border-radius: 0;
-      outline: none;
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem; // text-base
+  box-sizing: border-box;
+  margin: 10px 0;
+}
 
-      &:focus {
-        border-bottom: 1px solid #f87171; /* focus:border-red-400 */
-      }
-    }
+.input:focus {
+  border-color: #f87171; // focus:border-red-400
+  outline: none;
+}
 
-    button {
-      width: 100%;
-      padding: 10px;
-      background-color: #ef4444; /* bg-red-500 */
-      color: white;
-      border: none;
-      border-radius: 6px;
-      margin-top: 16px;
-      transition: background-color 0.2s;
+.button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
 
-      &:hover {
-        background-color: #dc2626; /* hover:bg-red-600 */
-      }
-    }
-  }
+.button:hover {
+  background-color: #cc0000;
+}
 
-  .forgotArea {
-    text-align: right;
-    margin-top: 12px;
+.forgotPassword {
+  text-align: right;
+  margin-top: 1rem; // mt-3
+}
 
-    a {
-      font-size: 0.875rem;
-      color: #ef4444; /* red-500 */
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
+.forgotPassword a {
+  font-size: 0.875rem; // text-sm
+  color: #f87171; // text-red-500
+  text-decoration: underline;
 }
